@@ -18,3 +18,11 @@ exports.run = (client, message, args) => {
     message.reply('Command does not exist!');
   }
 };
+
+exports.help = {
+  name: 'Reload',
+  description: 'Reloads a command.',
+  usage: '!reload [command]\n\nWARNING: ADMIN ONLY',
+  extended: '',
+  category: 'admin'
+}

@@ -1,0 +1,1 @@
+Make Ace either 1 or 11 in blackjackdelete certain commands after setTimeout

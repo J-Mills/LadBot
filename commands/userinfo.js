@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.run = async (bot, message, args) => {
+exports.run = async (client, message, args) => {
   let embed = new Discord.RichEmbed()
     .setAuthor(message.author.username)
     .setDescription("This is the user's info!")
@@ -13,5 +13,9 @@ exports.run = async (bot, message, args) => {
 }
 
 exports.help = {
-  name: 'userinfo'
+  name: 'UserInfo',
+  description: 'Displays info about the author\'s account.',
+  usage: '!userinfo',
+  extended: '',
+  category: 'general'
 }

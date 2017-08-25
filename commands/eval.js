@@ -24,3 +24,11 @@ exports.run = (client, message, args) => {
     }
   }
 }
+
+exports.help = {
+  name: 'Eval',
+  description: 'Evaluates arbitrary javascript.',
+  usage: '!eval [args]\n\nWARNING: ADMIN ONLY',
+  extended: '',
+  category: 'admin'
+}
