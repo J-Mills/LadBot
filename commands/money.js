@@ -1,18 +1,13 @@
-// const sql = require("sqlite");
-// sql.open("../idlegame.sqlite");
+const fs = require('fs');
+const money = require('../money.json');
+let points = JSON.parse(fs.readFileSync('./money.json', 'utf-8'));
 
-// sql.get(`SELECT * FROM idlegame WHERE userId = '${message.author.id}'`).then(row => {
-//   if (!row) { // Can't find the row.
-//     sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
-//   } else { // Can find the row.
-//     sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
-//   }
-// }).catch(() => {
-//   console.error;
-//   sql.run("CREATE TABLE IF NOT EXISTS idlegame (userId TEXT, points INTEGER, level INTEGER)").then(() => {
-//     sql.run("INSERT INTO idlegame (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
-//   });
-// });
+exports.run = async (client, message, args) => {
+  let userData = points[message.author.id];
+  console.log(userData);
+  
+  message.channel.send(`You are currently level ${userData.level} with ${userData.points} xp.`)
+};
 
 exports.help = {
   name: 'Money',

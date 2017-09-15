@@ -2,8 +2,9 @@ const Discord     = require('discord.js');
 const client      = new Discord.Client();
 const fs          = require('fs');
 const config      = require('./config.json');
-// const sql         = require('sqlite');
 const blackJack   = require('./commands/blackjack');
+
+let points = JSON.parse(fs.readFileSync('./money.json', 'utf-8'));
 
 fs.readdir('./events/', (err, files) => {
   if (err) return console.error(err);
@@ -20,6 +21,29 @@ client.on('message', (message) => {
     message.channel.send('Private messages are not supported!');
     return;
   };
+
+  // --- START MONEY SECTION ---
+  
+  if (!points[message.author.id]) points[message.author.id] = {
+    points: 0,
+    level: 0
+  };
+  let userData = points[message.author.id];
+  userData.points++;
+
+  let curLevel = Math.floor(0.9 * Math.sqrt(userData.points));
+  if (curLevel > userData.level) {
+    // Level up!
+    userData.level = curLevel;
+    message.reply(`Congratulations, you just advanced a level!\nYou are now level ${curLevel}.`);
+  }
+
+  fs.writeFile("./money.json", JSON.stringify(points), (err) => {
+    if (err) console.error(err)
+  });
+
+  // --- END MONEY SECTION ---
+
   if (message.content.indexOf(config.prefix) !== 0) return;
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
@@ -64,7 +88,7 @@ client.on('messageReactionAdd', async (messageReaction, user) => {
     messageReaction.message.edit(`\`\`\`lua\n['${result}']\n\n+---------+\n| CASINO! |\n|---------| o\n|' ${first} ${second} ${third} '| |\n|---------|/\n|  +  [_] |\n+---------+\`\`\``)
   }
   if (messageReaction.emoji.name == '❓') {
-    if (messageReaction.message.content.charAt(1) !== 'h') return;
+    // if (messageReaction.message.content.charAt(1) !== 'l') return;
 
     let commands = [];
 
@@ -206,9 +230,9 @@ client.on('messageReactionAdd', async (messageReaction, user) => {
 client.on('messageReactionRemove', async (messageReaction, user) => {
   if (user == client.user) return;
   if (messageReaction.emoji.name == '❓') {
-    if (messageReaction.message.content.charAt(1) !== 'h') return;
+    // if (messageReaction.message.content.charAt(1) !== 'h') return;
     // let msg = messageReaction.message.channel.send('hi');
-    messageReaction.message.channel.fetchMessage();
+    messageReaction.lastMessageID.delete();
   }
 })
 

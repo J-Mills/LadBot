@@ -3,6 +3,9 @@ const fs = require('fs');
 
 exports.run = async (client, message, args) => {
   if (!args[0]) {
+    // message.channel.send(`Click the '❓' for help!`).then(message => {
+    //   message.react('❓');
+    // });
     message.react('❓');
   } else {
     try {
