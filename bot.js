@@ -23,7 +23,7 @@ client.on('message', (message) => {
   };
 
   // --- START MONEY SECTION ---
-  
+
   if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
     level: 0
@@ -31,7 +31,7 @@ client.on('message', (message) => {
   let userData = points[message.author.id];
   userData.points++;
 
-  let curLevel = Math.floor(0.9 * Math.sqrt(userData.points));
+  let curLevel = Math.floor(0.8 * Math.sqrt(userData.points));
   if (curLevel > userData.level) {
     // Level up!
     userData.level = curLevel;
