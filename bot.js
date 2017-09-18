@@ -27,7 +27,8 @@ client.on('message', (message) => {
   if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
     level: 0,
-    coins: 0
+    coins: 0,
+    username: client.users.get(message.author.id).username
   };
   let userData = points[message.author.id];
   userData.points++;
@@ -244,11 +245,14 @@ setInterval(function () {
     if (!points[user.id]) points[user.id] = {
       points: 0,
       level: 0,
-      coins: 0
+      coins: 0,
+      username: client.users.get(user.id).username
     };
+    let userData = points[user.id]
     if (user.presence.status == 'online') {
-      let userData = points[user.id]
-      userData.coins++;
+      userData.coins += 4;
+    } else if (user.presence.status == 'idle') {
+      userData.coins += 1;
     }
     fs.writeFile("./money.json", JSON.stringify(points), (err) => {
       if (err) console.error(err)
