@@ -4,7 +4,7 @@ const fs          = require('fs');
 const config      = require('./config.json');
 const blackJack   = require('./commands/blackjack');
 
-let points = JSON.parse(fs.readFileSync('./money.json', 'utf-8'));
+points = JSON.parse(fs.readFileSync('./money.json', 'utf-8'));
 
 fs.readdir('./events/', (err, files) => {
   if (err) return console.error(err);
@@ -26,7 +26,8 @@ client.on('message', (message) => {
 
   if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
-    level: 0
+    level: 0,
+    coins: 0
   };
   let userData = points[message.author.id];
   userData.points++;
@@ -234,6 +235,25 @@ client.on('messageReactionRemove', async (messageReaction, user) => {
     // let msg = messageReaction.message.channel.send('hi');
     messageReaction.lastMessageID.delete();
   }
-})
+});
+
+setInterval(function () {
+  let ladGuild = client.guilds.get('197513106803523584');
+  // console.log(ladGuild.members);
+  ladGuild.members.forEach(user => {
+    if (!points[user.id]) points[user.id] = {
+      points: 0,
+      level: 0,
+      coins: 0
+    };
+    if (user.presence.status == 'online') {
+      let userData = points[user.id]
+      userData.coins++;
+    }
+    fs.writeFile("./money.json", JSON.stringify(points), (err) => {
+      if (err) console.error(err)
+    });
+  });
+}, 60000);
 
 client.login(config.token).catch(console.error);

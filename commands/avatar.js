@@ -1,7 +1,7 @@
 exports.run = async (client, message, args) => {
   let msg = await message.channel.send("Generating avatar...");
 
-  mentioned = message.mentions.users.first();
+  let mentioned = message.mentions.users.first();
 
   if (args[0] != undefined) {
     message.channel.send(mentioned.displayAvatarURL);
