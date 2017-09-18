@@ -242,6 +242,7 @@ setInterval(function () {
   let ladGuild = client.guilds.get('197513106803523584');
   // console.log(ladGuild.members);
   ladGuild.members.forEach(user => {
+    if (user.id == '345143319371972608') return;
     if (!points[user.id]) points[user.id] = {
       points: 0,
       level: 0,
