@@ -9,11 +9,14 @@ exports.run = async (client, message, args) => {
   if (message.author.id !== config.adminID) {
     message.channel.send("You're not the admin!");
     return;
-  } else if (args[0] != undefined) {
+  } else if (args[2] == 'points') {
     userData.points += parseInt(amount);
     message.channel.send(`${amount} points awarded to ${mentioned}!`)
+  } else if (args[2] == 'coins') {
+    userData.coins += parseInt(amount);
+    message.channel.send(`${amount} coins awarded to ${mentioned}!`)
   } else {
-    console.log('welp')
+    message.channel.send('Please specify who you want to reward and how much!')
   }
 }
 
