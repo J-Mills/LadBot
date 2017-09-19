@@ -25,7 +25,7 @@
     "username": "dqbert",
     "points": 0,
     "level": 0,
-    "coins": 1821,
+    "coins": 2976,
     "emeralds": 0,
     "items": {
       "booster": 0,
@@ -36,7 +36,7 @@
     "username": "Topher",
     "points": 0,
     "level": 0,
-    "coins": 910,
+    "coins": 1216,
     "emeralds": 0,
     "items": {
       "booster": 0,
@@ -58,7 +58,7 @@
     "username": "BraveLT",
     "points": 0,
     "level": 0,
-    "coins": 2403,
+    "coins": 3627,
     "emeralds": 0,
     "items": {
       "booster": 0,
@@ -144,12 +144,12 @@
   },
   "159769994601824257": {
     "username": "Mizzazz",
-    "points": 82,
-    "level": 7,
-    "coins": 69303,
+    "points": 132,
+    "level": 9,
+    "coins": 99369,
     "emeralds": 0,
     "items": {
-      "booster": 49,
+      "booster": 311,
       "generator": 1
     }
   }

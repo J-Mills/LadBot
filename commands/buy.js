@@ -7,9 +7,10 @@ exports.run = async (client, message, args) => {
 
   try {
     if (args[1]) {
-      if ((userData.coins) > (shop[item].price * amount) && amount >= 1) {
+      Math.floor(shop[item].price * ((userData.items[item] / 10) + 1))
+      if ((userData.coins) > (Math.floor(shop[item].price * ((userData.items[item] / 10) + 1)) * amount) && amount >= 1) {
         userData.items[item] += parseInt(amount);
-        userData.coins -= (shop[item].price * amount);
+        userData.coins -= (Math.floor(shop[item].price * ((userData.items[item] / 10) + 1)) * amount);
         message.channel.send(`${amount} ${item}s bought!`);
       } else if (isNaN(args[1])) {
         message.channel.send('The amount should be a number!')
@@ -19,9 +20,9 @@ exports.run = async (client, message, args) => {
         message.channel.send(`You don't have enough coins!`);
       }
     } else if (!args[1]) {
-      if (userData.coins > shop[item].price) {
+      if (userData.coins > Math.floor(shop[item].price * ((userData.items[item] / 10) + 1))) {
         userData.items[item]++;
-        userData.coins -= shop[item].price;
+        userData.coins -= Math.floor(shop[item].price * ((userData.items[item] / 10) + 1));
         message.channel.send(`${item} bought!`);
       } else {
         message.channel.send(`You don't have enough coins!`);
