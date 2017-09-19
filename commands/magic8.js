@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
   if (!message.content.endsWith('?')) return message.reply('That does not look like a question. (hint: end your question with a `?`.)');
   const msg = await message.channel.send('`Thinking...`');
   setTimeout( async () => {
-    await msg.edit(`${answers[Math.floor(Math.random() * answers.length)]}`);
+    await msg.edit(`🎱 ${answers[Math.floor(Math.random() * answers.length)]}`);
   }, Math.random() * (1 - 5) + 1 * 2000);
 };
 
