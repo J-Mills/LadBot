@@ -75,5 +75,5 @@ exports.help = {
   description: 'Displays the current top 5 members.',
   usage: '!top5 [coins || points]',
   extended: '',
-  category: 'util'
+  category: 'idle'
 }

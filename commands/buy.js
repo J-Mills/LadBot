@@ -18,5 +18,5 @@ exports.help = {
   description: 'Use your coins to buy upgrades.',
   usage: '!buy [item]',
   extended: '',
-  category: 'fun'
+  category: 'idle'
 }

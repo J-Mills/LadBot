@@ -18,5 +18,5 @@ exports.help = {
   description: 'Buy things with your gold!',
   usage: '!shop',
   extended: '',
-  category: 'fun'
+  category: 'idle'
 }

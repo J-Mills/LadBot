@@ -98,6 +98,7 @@ client.on('messageReactionAdd', async (messageReaction, user) => {
     let funCommands = [];
     let utilCommands = [];
     let adminCommands = [];
+    let idleCommands = [];
 
     fs.readdir('./commands/', (err, files) => {
       for (i = 0; i < files.length; i++) {
@@ -119,12 +120,17 @@ client.on('messageReactionAdd', async (messageReaction, user) => {
           utilCommands.push(`${commandFile.help.name}${' '.repeat(9 - commandFile.help.name.length)} :: `);
           utilCommands.push(`${commandFile.help.description} \n`);
         }
+        if (commandFile.help.category == 'idle') {
+          idleCommands.push(`${commandFile.help.name}${' '.repeat(9 - commandFile.help.name.length)} :: `);
+          idleCommands.push(`${commandFile.help.description} \n`);
+        }
       }
       let fGeneral = generalCommands.join('');
       let fFun = funCommands.join('');
       let fUtil = utilCommands.join('');
       let fAdmin = adminCommands.join('');
-      messageReaction.message.channel.send(`= Command List =\n\n[Use !help [commandname] for details and usage]\n\n== General ==\n${fGeneral}\n== Fun ==\n${fFun}\n== Utilities ==\n${fUtil}\n== Admin ==\n${fAdmin}\nCAUTION: Help command is undergoing an overhaul. Please be patient! :)`, { code: 'asciidoc' }).then(message => {
+      let fIdle = idleCommands.join('');
+      messageReaction.message.channel.send(`= Command List =\n\n[Use !help [commandname] for details and usage]\n\n== General ==\n${fGeneral}\n== Fun ==\n${fFun}\n== Utilities ==\n${fUtil}\n== Idle ==\n${fIdle}\n== Admin ==\n${fAdmin}\nCAUTION: Help command is undergoing an overhaul. Please be patient! :)`, { code: 'asciidoc' }).then(message => {
         message.react('🗑')
       });
     });

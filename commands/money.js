@@ -10,5 +10,5 @@ exports.help = {
   description: 'Displays your current level & xp.',
   usage: '!money',
   extended: '',
-  category: 'util'
+  category: 'idle'
 }
