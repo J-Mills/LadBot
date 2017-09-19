@@ -5,22 +5,31 @@ exports.run = async (client, message, args) => {
   let item = args[0];
   let amount = args[1];
 
-  if (args[1]) {
-    if ((userData.coins) > (shop[item].price * amount)) {
-      userData.items[item] += parseInt(amount);
-      userData.coins -= (shop[item].price * amount);
-      message.channel.send(`${amount} ${item}'s bought!`);
-    } else {
-      message.channel.send(`You don't have enough coins!`);
+  try {
+    if (args[1]) {
+      if ((userData.coins) > (shop[item].price * amount) && amount >= 1) {
+        userData.items[item] += parseInt(amount);
+        userData.coins -= (shop[item].price * amount);
+        message.channel.send(`${amount} ${item}s bought!`);
+      } else if (isNaN(args[1])) {
+        message.channel.send('The amount should be a number!')
+      } else if (amount === '0') {
+        message.channel.send(`You can't buy 0 of something!`)
+      } else {
+        message.channel.send(`You don't have enough coins!`);
+      }
+    } else if (!args[1]) {
+      if (userData.coins > shop[item].price) {
+        userData.items[item]++;
+        userData.coins -= shop[item].price;
+        message.channel.send(`${item} bought!`);
+      } else {
+        message.channel.send(`You don't have enough coins!`);
+      }
     }
-  } else {
-    if (userData.coins > shop[item].price) {
-      userData.items[item]++;
-      userData.coins -= shop[item].price;
-      message.channel.send(`${item} bought!`);
-    } else {
-      message.channel.send(`You don't have enough coins!`);
-    }
+  } catch (err) {
+    message.channel.send(`Sorry, that item doesn't exist or was spelled incorrectly. Try the \`!shop\` command for a list of the available items.`);
+    return;
   }
 }
 

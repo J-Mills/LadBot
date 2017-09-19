@@ -236,6 +236,9 @@ client.on('messageReactionRemove', async (messageReaction, user) => {
 
 setInterval(function () {
   let ladGuild = client.guilds.get('197513106803523584');
+  let memberArray = [];
+  let sortedArray = [];
+  let formattedArray = [];
   ladGuild.members.forEach(user => {
     if (user.id == '345143319371972608') return;
     if (!points[user.id]) points[user.id] = {
@@ -246,13 +249,32 @@ setInterval(function () {
       emeralds: 0,
       items
     };
+
     let userData = points[user.id]
     if (user.presence.status == 'online') {
       userData.coins += 4 + (2 * userData.items.booster);
     } else if (user.presence.status == 'idle') {
       userData.coins += 1 + (2 * userData.items.booster);
     }
+
+    sortedArray.push(points[user.id]);
   });
+
+  sortedArray.sort((a, b) => b.coins - a.coins);
+
+  for (i = 0; i < sortedArray.length; i++) {
+    let pos = i + 1;
+    formattedArray.push(pos +      ' > # \" ' + sortedArray[i].username + ' \"\n');
+    formattedArray.push('Level:    ' + sortedArray[i].level + '\n');
+    formattedArray.push('Points:   ' + sortedArray[i].points + '\n');
+    formattedArray.push('Coins:    ' + sortedArray[i].coins + '\n');
+    formattedArray.push('Emeralds: ' + sortedArray[i].emeralds + '\n\n');
+  }
+
+  client.channels.get('359667908067983362').fetchMessage('359690360945115136').then(message => {
+    message.edit(`${formattedArray.join('')}`, { code: 'ml' });
+  });
+
 }, 5000);
 
 setInterval(function () {

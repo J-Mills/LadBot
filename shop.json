@@ -2,7 +2,7 @@
   "booster" : {
     "price" : 100
   },
-  "gold generator" : {
+  "generator" : {
     "price" : 1000
   }
 }
