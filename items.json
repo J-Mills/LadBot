@@ -1,5 +1,4 @@
 {
-  "booster" : {
-    "price" : 100
-  }
+  "booster" : 0,
+  "generator" : 0
 }

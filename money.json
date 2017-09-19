@@ -1,1 +1,156 @@
-{"84268406144008192":{"points":0,"level":0,"coins":0,"username":"Amelia","booster":0},"117367702066167808":{"points":0,"level":0,"coins":0,"username":"Mimic","booster":0},"144975808367296512":{"points":0,"level":0,"coins":506,"username":"dqbert","booster":0},"144979321264668672":{"points":0,"level":0,"coins":0,"username":"Topher","booster":0},"157672429001375744":{"points":0,"level":0,"coins":0,"username":"DaveFromSteam","booster":0},"159769994601824257":{"points":135,"level":9,"coins":9375,"username":"Mizzazz","booster":11},"160778475983077377":{"points":0,"level":0,"coins":0,"username":"BraveLT","booster":0},"200004771971596289":{"points":0,"level":0,"coins":0,"username":"mike154698","booster":0},"208255855731146752":{"points":0,"level":0,"coins":0,"username":"Gnomeroaster","booster":0},"224615270835159040":{"points":0,"level":0,"coins":0,"username":"hawaiianshirtenthusiast","booster":0},"235066064881319936":{"points":0,"level":0,"coins":0,"username":"spikeiscool","booster":0},"255098732092063745":{"points":0,"level":0,"coins":0,"username":"Pidgey96","booster":0},"256904909243416577":{"points":0,"level":0,"coins":0,"username":"Brickhaus","booster":0},"285017309985243136":{"points":0,"level":0,"coins":0,"username":"PolskaPanda","booster":0}}
+{
+  "84268406144008192": {
+    "username": "Amelia",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "117367702066167808": {
+    "username": "Mimic",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "144975808367296512": {
+    "username": "dqbert",
+    "points": 0,
+    "level": 0,
+    "coins": 2,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "144979321264668672": {
+    "username": "Topher",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "157672429001375744": {
+    "username": "DaveFromSteam",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "160778475983077377": {
+    "username": "BraveLT",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "200004771971596289": {
+    "username": "mike154698",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "208255855731146752": {
+    "username": "Gnomeroaster",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "224615270835159040": {
+    "username": "hawaiianshirtenthusiast",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "235066064881319936": {
+    "username": "spikeiscool",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "255098732092063745": {
+    "username": "Pidgey96",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "256904909243416577": {
+    "username": "Brickhaus",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "285017309985243136": {
+    "username": "PolskaPanda",
+    "points": 0,
+    "level": 0,
+    "coins": 0,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  },
+  "159769994601824257": {
+    "username": "Mizzazz",
+    "points": 0,
+    "level": 0,
+    "coins": 4,
+    "emeralds": 0,
+    "items": {
+      "booster": 0,
+      "generator": 0
+    }
+  }
+}

@@ -2,7 +2,8 @@ const Discord     = require('discord.js');
 const client      = new Discord.Client();
 const fs          = require('fs');
 const config      = require('./config.json');
-const blackJack   = require('./commands/blackjack');
+const blackJack   = require('./commands/blackjack')
+const items       = require('./items.json');
 
 points = JSON.parse(fs.readFileSync('./money.json', 'utf-8'));
 
@@ -24,25 +25,14 @@ client.on('message', (message) => {
 
   // --- START MONEY SECTION ---
 
-  if (!points[message.author.id]) points[message.author.id] = {
-    points: 0,
-    level: 0,
-    coins: 0,
-    username: client.users.get(message.author.id).username
-  };
   let userData = points[message.author.id];
   userData.points++;
 
   let curLevel = Math.floor(0.8 * Math.sqrt(userData.points));
   if (curLevel > userData.level) {
-    // Level up!
     userData.level = curLevel;
     message.reply(`Congratulations, you just advanced a level!\nYou are now level ${curLevel}.`);
   }
-
-  fs.writeFile("./money.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
-  });
 
   // --- END MONEY SECTION ---
 
@@ -246,27 +236,27 @@ client.on('messageReactionRemove', async (messageReaction, user) => {
 
 setInterval(function () {
   let ladGuild = client.guilds.get('197513106803523584');
-  // console.log(ladGuild.members);
   ladGuild.members.forEach(user => {
     if (user.id == '345143319371972608') return;
     if (!points[user.id]) points[user.id] = {
+      username: client.users.get(user.id).username,
       points: 0,
       level: 0,
       coins: 0,
-      username: client.users.get(user.id).username,
-      booster: 0
+      emeralds: 0,
+      items
     };
     let userData = points[user.id]
     if (user.presence.status == 'online') {
-      userData.coins += 4 + (2 * userData.booster);
+      userData.coins += 4 + (2 * userData.items.booster);
     } else if (user.presence.status == 'idle') {
-      userData.coins += 1 + (2 * userData.booster);
+      userData.coins += 1 + (2 * userData.items.booster);
     }
   });
-}, 10000);
+}, 5000);
 
 setInterval(function () {
-  fs.writeFile("./money.json", JSON.stringify(points), (err) => {
+  fs.writeFile("./money.json", JSON.stringify(points, null, 2), (err) => {
     if (err) console.error(err)
   });
 }, 500);

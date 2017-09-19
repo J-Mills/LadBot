@@ -1,0 +1,8 @@
+{
+  "booster" : {
+    "price" : 100
+  },
+  "gold generator" : {
+    "price" : 1000
+  }
+}
