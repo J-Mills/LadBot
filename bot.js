@@ -247,18 +247,22 @@ setInterval(function () {
       points: 0,
       level: 0,
       coins: 0,
-      username: client.users.get(user.id).username
+      username: client.users.get(user.id).username,
+      booster: 0
     };
     let userData = points[user.id]
     if (user.presence.status == 'online') {
-      userData.coins += 4;
+      userData.coins += 4 + (2 * userData.booster);
     } else if (user.presence.status == 'idle') {
-      userData.coins += 1;
+      userData.coins += 1 + (2 * userData.booster);
     }
-    fs.writeFile("./money.json", JSON.stringify(points), (err) => {
-      if (err) console.error(err)
-    });
   });
-}, 60000);
+}, 10000);
+
+setInterval(function () {
+  fs.writeFile("./money.json", JSON.stringify(points), (err) => {
+    if (err) console.error(err)
+  });
+}, 500);
 
 client.login(config.token).catch(console.error);
