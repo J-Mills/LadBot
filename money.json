@@ -25,7 +25,7 @@
     "username": "dqbert",
     "points": 0,
     "level": 0,
-    "coins": 2,
+    "coins": 181,
     "emeralds": 0,
     "items": {
       "booster": 0,
@@ -144,12 +144,12 @@
   },
   "159769994601824257": {
     "username": "Mizzazz",
-    "points": 0,
-    "level": 0,
-    "coins": 4,
+    "points": 47,
+    "level": 5,
+    "coins": 485,
     "emeralds": 0,
     "items": {
-      "booster": 0,
+      "booster": 34,
       "generator": 0
     }
   }
