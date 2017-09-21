@@ -3,44 +3,108 @@
     "username": "Amelia",
     "points": 0,
     "level": 0,
-    "coins": 0,
+    "coins": 740,
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "117367702066167808": {
     "username": "Mimic",
     "points": 0,
     "level": 0,
-    "coins": 1728,
+    "coins": 740,
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "144975808367296512": {
     "username": "dqbert",
     "points": 0,
     "level": 0,
-    "coins": 2976,
+    "coins": 941,
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "144979321264668672": {
     "username": "Topher",
     "points": 0,
     "level": 0,
-    "coins": 1216,
+    "coins": 590,
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "157672429001375744": {
@@ -51,18 +115,77 @@
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
+    }
+  },
+  "159769994601824257": {
+    "username": "Mizzazz",
+    "points": 76,
+    "level": 6,
+    "coins": 2494,
+    "emeralds": 0,
+    "items": {
+      "booster": 12,
+      "collector": 1,
+      "manager": 1,
+      "generator": 1,
+      "optimiser": 1,
+      "comparitor": 1,
+      "doubler": 4,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "160778475983077377": {
     "username": "BraveLT",
     "points": 0,
     "level": 0,
-    "coins": 3627,
+    "coins": 185,
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "200004771971596289": {
@@ -73,7 +196,23 @@
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "208255855731146752": {
@@ -84,18 +223,50 @@
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "224615270835159040": {
     "username": "hawaiianshirtenthusiast",
     "points": 0,
     "level": 0,
-    "coins": 0,
+    "coins": 3764,
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "235066064881319936": {
@@ -106,7 +277,23 @@
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "255098732092063745": {
@@ -117,18 +304,50 @@
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "256904909243416577": {
     "username": "Brickhaus",
     "points": 0,
     "level": 0,
-    "coins": 96,
+    "coins": 0,
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   },
   "285017309985243136": {
@@ -139,18 +358,23 @@
     "emeralds": 0,
     "items": {
       "booster": 0,
-      "generator": 0
-    }
-  },
-  "159769994601824257": {
-    "username": "Mizzazz",
-    "points": 132,
-    "level": 9,
-    "coins": 99369,
-    "emeralds": 0,
-    "items": {
-      "booster": 311,
-      "generator": 1
+      "collector": 0,
+      "manager": 0,
+      "generator": 0,
+      "optimiser": 0,
+      "comparitor": 0,
+      "doubler": 0,
+      "composer": 0,
+      "evaluator": 0,
+      "conjurer": 0,
+      "obfuscator": 0,
+      "reflector": 0,
+      "compiler": 0,
+      "hacker": 0,
+      "assembler": 0,
+      "resonator": 0,
+      "gravitator": 0,
+      "atomizer": 0
     }
   }
 }

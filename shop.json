@@ -1,8 +1,92 @@
 {
   "booster" : {
-    "price" : 100
+    "price" : 60,
+    "description" : "Example text",
+    "image" : "+-----+\n|-...-|\n|*-o-*|\n+-----+"
+  },
+  "collector" : {
+    "price" : 400,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "manager" : {
+    "price" : 1200,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
   },
   "generator" : {
-    "price" : 1000
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "optimiser" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "comparitor" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "doubler" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "composer" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "evaluator" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "conjurer" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "obfuscator" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "reflector" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "compiler" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "hacker" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "assembler" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "resonator" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "gravitator" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
+  },
+  "atomizer" : {
+    "price" : 100,
+    "description" : "Example text",
+    "image" : "ASCII Picture"
   }
 }

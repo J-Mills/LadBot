@@ -1,4 +1,20 @@
 {
   "booster" : 0,
-  "generator" : 0
+  "collector" : 0,
+  "manager" : 0,
+  "generator" : 0,
+  "optimiser" : 0,
+  "comparitor" : 0,
+  "doubler" : 0,
+  "composer" : 0,
+  "evaluator" : 0,
+  "conjurer" : 0,
+  "obfuscator" : 0,
+  "reflector" : 0,
+  "compiler" : 0,
+  "hacker" : 0,
+  "assembler" : 0,
+  "resonator" : 0,
+  "gravitator" : 0,
+  "atomizer" : 0
 }

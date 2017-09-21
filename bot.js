@@ -251,8 +251,29 @@ setInterval(function () {
     };
 
     let userData = points[user.id]
+    let formula = 4
+      + (2 * userData.items.booster)
+      + (2 * userData.items.collector)
+      + (2 * userData.items.manager)
+      + (2 * userData.items.generator)
+      + (2 * userData.items.optimiser)
+      + (2 * userData.items.comparitor)
+      + (2 * userData.items.doubler)
+      + (2 * userData.items.composer)
+      + (2 * userData.items.evaluator)
+      + (2 * userData.items.conjurer)
+      + (2 * userData.items.obfuscator)
+      + (2 * userData.items.reflector)
+      + (2 * userData.items.compiler)
+      + (2 * userData.items.hacker)
+      + (2 * userData.items.assembler)
+      + (2 * userData.items.resonator)
+      + (2 * userData.items.gravitator)
+      + (2 * userData.items.atomizer);
+    console.log(formula);
     if (user.presence.status == 'online') {
-      userData.coins += 4 + (2 * userData.items.booster);
+      // userData.coins += 4 + (2 * userData.items.booster);
+      userData.coins += formula;
     } else if (user.presence.status == 'idle') {
       userData.coins += 1 + (2 * userData.items.booster);
     }
@@ -265,10 +286,10 @@ setInterval(function () {
   for (i = 0; i < sortedArray.length; i++) {
     let pos = i + 1;
     formattedArray.push(pos +      ' > # \" ' + sortedArray[i].username + ' \"\n');
-    formattedArray.push('Level:    ' + sortedArray[i].level + '\n');
-    formattedArray.push('Points:   ' + sortedArray[i].points + '\n');
-    formattedArray.push('Coins:    ' + sortedArray[i].coins + '\n');
-    formattedArray.push('Emeralds: ' + sortedArray[i].emeralds + '\n\n');
+    formattedArray.push('Level:  ' + sortedArray[i].level + '\n');
+    formattedArray.push('Points: ' + sortedArray[i].points + '\n');
+    formattedArray.push('Coins:  ' + sortedArray[i].coins + '\n\n');
+    // formattedArray.push('Emeralds:' + sortedArray[i].emeralds + '\n\n');
   }
 
   client.channels.get('359667908067983362').fetchMessage('359690360945115136').then(message => {

@@ -12,6 +12,9 @@ exports.run = async (client, message, args) => {
         userData.items[item] += parseInt(amount);
         userData.coins -= (Math.floor(shop[item].price * ((userData.items[item] / 10) + 1)) * amount);
         message.channel.send(`${amount} ${item}s bought!`);
+      } else if (args[1] == 'price') {
+        let price = Math.floor(shop[item].price * ((userData.items[item] / 10) + 1));
+        message.channel.send(`The coin ${item} will cost ${price}`);
       } else if (isNaN(args[1])) {
         message.channel.send('The amount should be a number!')
       } else if (amount === '0') {
@@ -19,6 +22,7 @@ exports.run = async (client, message, args) => {
       } else {
         message.channel.send(`You don't have enough coins!`);
       }
+
     } else if (!args[1]) {
       if (userData.coins > Math.floor(shop[item].price * ((userData.items[item] / 10) + 1))) {
         userData.items[item]++;
@@ -37,7 +41,7 @@ exports.run = async (client, message, args) => {
 exports.help = {
   name: 'Buy',
   description: 'Use your coins to buy upgrades.',
-  usage: '!buy [item]',
+  usage: '!buy [item] [amount]',
   extended: '',
   category: 'idle'
 }

@@ -4,9 +4,9 @@ exports.run = async (client, message, args) => {
    /______\\      -- Please, Browse My Wares!
   (________)     ___________________________
   | /_  _\\ |
-  | |o  o| |     * - Solar Coins       $1200
-  | | _\\ | |     * - Meme Coins        $2000
-  | |    | |     * - Coin Generator    $5000
+  | |o  o| |     * - Solar Coins       ฿1200
+  | | _\\ | |     * - Meme Coins        ฿2000
+  | |    | |     * - Coin Generator    ฿5000
   | |.__.| |
  /  |-..-|  \\
 /___|____|___\\`
