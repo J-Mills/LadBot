@@ -270,7 +270,7 @@ setInterval(function () {
       + (2 * userData.items.resonator)
       + (2 * userData.items.gravitator)
       + (2 * userData.items.atomizer);
-    console.log(formula);
+    // console.log(formula);
     if (user.presence.status == 'online') {
       // userData.coins += 4 + (2 * userData.items.booster);
       userData.coins += formula;

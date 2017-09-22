@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
         message.channel.send(`${amount} ${item}s bought!`);
       } else if (args[1] == 'price') {
         let price = Math.floor(shop[item].price * ((userData.items[item] / 10) + 1));
-        message.channel.send(`The coin ${item} will cost ${price}`);
+        message.channel.send(`The coin ${item} will cost ${price.toLocaleString()}`);
       } else if (isNaN(args[1])) {
         message.channel.send('The amount should be a number!')
       } else if (amount === '0') {
