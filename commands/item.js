@@ -4,11 +4,26 @@ exports.run = async (client, message, args) => {
   let userData = points[message.author.id];
   let item = args[0]
   let list = Object.keys(shop);
+  let unlockedItems = [];
 
   try {
     if (args[0] == 'list') {
-      message.channel.send('This is where a list would go!');
-      message.channel.send(`${list.join(' \n')}`, { code: 'ml' })
+      list.forEach((item, index) => {
+        if (userData.items[item] > 0) {
+          unlockedItems.push('Coin ' + item);
+        } else {
+          if (index > 0) {
+            let previous = list[index - 1];
+            if (userData.items[previous] >= 25) {
+              unlockedItems.push('Coin ' + item);
+            } else {
+              unlockedItems.push('???');
+            }
+          }
+        }  
+      });
+      message.channel.send(unlockedItems.join(' \n'), { code: 'ml' });
+      // message.channel.send(`${list.join(' \n')}`, { code: 'ml' })
     } else if (args[0]) {
       message.channel.send(`${shop[item].image}\n
 Name: Coin ${item}

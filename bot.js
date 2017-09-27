@@ -246,12 +246,12 @@ setInterval(function () {
       points: 0,
       level: 0,
       coins: 0,
-      emeralds: 0,
+      gems: 0,
       items
     };
 
     let userData = points[user.id]
-    let formula = 4
+    let formula =
       + (2 * userData.items.booster)
       + (2 * userData.items.collector)
       + (2 * userData.items.manager)
@@ -273,9 +273,9 @@ setInterval(function () {
     // console.log(formula);
     if (user.presence.status == 'online') {
       // userData.coins += 4 + (2 * userData.items.booster);
-      userData.coins += formula;
+      userData.coins += 4 + formula;
     } else if (user.presence.status == 'idle') {
-      userData.coins += 1 + (2 * userData.items.booster);
+      userData.coins += 1 + formula;
     }
 
     sortedArray.push(points[user.id]);
@@ -284,14 +284,21 @@ setInterval(function () {
   sortedArray.sort((a, b) => b.coins - a.coins);
 
   for (i = 0; i < sortedArray.length; i++) {
+    // Rank
     let pos = i + 1;
-    formattedArray.push(pos +      ' > # \" ' + sortedArray[i].username + ' \"\n');
+    // Align properly if there are two characters (10+ etc)
+    if (pos >= 10) {
+      space = '';
+    } else {
+      space = ' ';
+    }
+    formattedArray.push(pos + ' > # ' + space + '\"' + sortedArray[i].username + '\"\n');
     formattedArray.push('Level:  ' + sortedArray[i].level + '\n');
     formattedArray.push('Points: ' + sortedArray[i].points + '\n');
-    formattedArray.push('Coins:  ' + sortedArray[i].coins + '\n\n');
-    // formattedArray.push('Emeralds:' + sortedArray[i].emeralds + '\n\n');
+    formattedArray.push('Coins:  ฿' + sortedArray[i].coins.toLocaleString() + '\n');
+    formattedArray.push('Gems:   ' + sortedArray[i].gems + '\n\n');
   }
-
+  // Get channel and message to edit and add the formatted messages to it
   client.channels.get('359667908067983362').fetchMessage('359690360945115136').then(message => {
     message.edit(`${formattedArray.join('')}`, { code: 'ml' });
   });
