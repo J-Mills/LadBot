@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
   for (i = 0; i < itemList.length; i++) {
     if (valueList[i] == 0) {
     } else {
-      inventoryList.push(`${itemList[i]}: ${valueList[i]}`)
+      inventoryList.push(`Coin ${itemList[i]}: ${valueList[i]}`)
     }
   }
 

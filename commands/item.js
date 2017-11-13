@@ -2,33 +2,45 @@ const shop = require('../shop.json');
 
 exports.run = async (client, message, args) => {
   let userData = points[message.author.id];
+  let userItems = Object.keys(userData.items);
+  let userValues = Object.values(userData.items);
   let item = args[0]
   let list = Object.keys(shop);
   let unlockedItems = [];
 
   try {
     if (args[0] == 'list') {
-      list.forEach((item, index) => {
-        if (userData.items[item] > 0) {
-          unlockedItems.push('Coin ' + item);
-        } else {
-          if (index > 0) {
-            let previous = list[index - 1];
-            if (userData.items[previous] >= 25) {
-              unlockedItems.push('Coin ' + item);
-            } else {
-              unlockedItems.push('???');
-            }
-          }
-        }  
-      });
+      for (i = 0; i < list.length; i++) {
+        if (userValues[i] > 0) {
+          unlockedItems.push(`Coin ${list[i]}`);
+        }
+      }
+
+      // list.forEach((item, index) => {
+      //   if (userData.items[item] > 0) {
+      //     unlockedItems.push('Coin ' + item);
+      //   } else {
+      //     if (index > 0) {
+      //       let previous = list[index - 1];
+      //       if (userData.items[previous] >= 25) {
+      //         unlockedItems.push('Coin ' + item);
+      //         if (userData.items[item] == 0) {
+      //           // Remove last item and replace it with the same one but NEW added
+      //           // Please make this more efficient later...
+      //           unlockedItems.pop();
+      //           unlockedItems.push('Coin ' + item + ' * NEW *')
+      //         }
+      //       } else {
+      //           unlockedItems.push(`To unlock the next item, purchase ${(25 - userData.items[previous])} more ${previous}s`);
+      //         return;
+      //         // unlockedItems.push('???');
+      //       }
+      //     }
+      //   }  
+      // });
       message.channel.send(unlockedItems.join(' \n'), { code: 'ml' });
-      // message.channel.send(`${list.join(' \n')}`, { code: 'ml' })
     } else if (args[0]) {
-      message.channel.send(`${shop[item].image}\n
-Name: Coin ${item}
-Price: ฿${shop[item].price}
-Description: ${shop[item].description}`, { code: 'ml' });
+      message.channel.send(`${shop[item].image}\n\nItem Name: Coin ${item}\nStock Price: ฿${shop[item].price}\nDescription: ${shop[item].description}`, { code: 'ml' });
     } else if (!args[0]) {
       message.channel.send('Please provide an item to give info about, or type \`!item list\` for a list of the items to see.')
     }

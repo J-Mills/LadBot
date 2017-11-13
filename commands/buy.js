@@ -4,7 +4,6 @@ exports.run = async (client, message, args) => {
   let userData = points[message.author.id];
   let item = args[0];
   let amount = args[1];
-
   let formula = Math.floor(shop[item].price * ((userData.items[item] / 10) + 1));
 
   try {
